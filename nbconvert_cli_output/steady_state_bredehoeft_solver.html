@@ -14256,10 +14256,30 @@ a.anchor-link {
     </script>
     <!-- End of mathjax configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Bredehoeft-Steady-State-Seepage-Calculator">Bredehoeft Steady State Seepage Calculator<a class="anchor-link" href="#Bredehoeft-Steady-State-Seepage-Calculator">&#182;</a></h1><h3 id="Bredehoeft,-J.D.-and-Papadopulos,-I.S.,-1965.-Rates-of-vertical-groundwater-movement-estimated-from-the-Earth's-thermal-profile.-Water-Resour.-Res.,-1(2):-325-328">Bredehoeft, J.D. and Papadopulos, I.S., 1965. Rates of vertical groundwater movement estimated from the Earth's thermal profile. Water Resour. Res., 1(2): 325-328<a class="anchor-link" href="#Bredehoeft,-J.D.-and-Papadopulos,-I.S.,-1965.-Rates-of-vertical-groundwater-movement-estimated-from-the-Earth's-thermal-profile.-Water-Resour.-Res.,-1(2):-325-328">&#182;</a></h3><p>This notebook utilizes steady-state sediment temperature profile to estimate groundwater seepage flux. Users are encouraged to familiarize with the theory beforehand. The only assumed parameters in the steady-state models are volumetric heat capacity of water (ρfcf) and thermal conductivity (k) of the saturated porous media. Please look up the worksheet - "Parameter Metadata" for applicable parameter values.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Tₒ, sediment temperature at the shallow depth (°C)</li>
+<li>T, sediment temperature at the middle depth (°C)</li>
+<li>TL, sediment temperature at the deeper depth (°C)</li>
+<li>Tz, distance between the measurement points of TO and TZ (m)</li>
+<li>L, distance between the measurement points of TO and TL (m)</li>
+<li>k, thermal conductivity of saturated sandy sediment-water system (J/(m•s•C))</li>
+<li>ρfCf, heat capacity of water (J/(m³•C))</li>
+</ul>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">exp</span>
@@ -14286,7 +14306,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">func</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">((</span><span class="n">sed_temp_mid</span> <span class="o">-</span> <span class="n">sed_temp_shallow</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">sed_temp_deep</span> <span class="o">-</span> <span class="n">sed_temp_shallow</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span>
@@ -14301,7 +14321,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">solve_solution</span> <span class="o">=</span> <span class="n">fsolve</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">estimate</span><span class="p">)</span>
@@ -14315,7 +14335,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">solve_solution</span><span class="p">))</span>
