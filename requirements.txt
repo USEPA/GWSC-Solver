@@ -12,7 +12,7 @@
 #---------------------------------------------------------------------------------------#
 
 ipykernel #>=5.5.0              # The IPython kernel for Jupyter.
-numpy #>=1.20.1                 # NumPy is the fundamental package for array computing with Python.
+numpy==1.19.3                   # NumPy is the fundamental package for array computing with Python.
 scipy==1.2.1                    # SciPy: Scientific Library for Python
 nbconvert_reportlab #>=0.2      # An experimental tool to convert Jupyter notebooks to PDFs using Reportlab.
 reportlab #>=3.5.59             # The ReportLab Toolkit. An Open Source Python library for generating PDFs and graphics.
@@ -21,5 +21,5 @@ jupyter
 
 # Download https://miktex.org/download
 
-# NOTE: All version specifications, except for SciPy, to better support running in Python 3.6. 
+# NOTE: All version specifications, except for SciPy, to better support running in Python 3.6.
 # Older version of Python is required to use SciPy 1.2.1, only version currently works with Transient solvers.
