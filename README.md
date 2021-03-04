@@ -11,25 +11,25 @@ Training for EPA/ORD/CESER SciNote ELFN, Jupyter Notebook, and Data Search app.
 
 ## Home
 
-See [Wiki/Home](https://github.com/dyoung11/GWSC-Solver/wiki).
+See [Wiki/Home](https://github.com/USEPA/GWSC-Solver/wiki).
 ***
 
 ## Installation
 
-See [Wiki/Installation](https://github.com/dyoung11/GWSC-Solver/wiki/Installation).
+See [Wiki/Installation](https://github.com/USEPA/GWSC-Solver/wiki/Local-Installation-for-Programmers).
 ***
 
 ## Contributing
 
-See [Wiki/Contributors](https://github.com/dyoung11/GWSC-Solver/wiki/Contributing).
+See [Wiki/Contributors](https://github.com/USEPA/GWSC-Solver/wiki/Contributing).
 ***
 
 ## Disclaimers
 
-See [Wiki/Disclaimers](https://github.com/dyoung11/GWSC-Solver/wiki/Disclaimers).
+See [Wiki/Disclaimers](https://github.com/USEPA/GWSC-Solver/wiki/Disclaimers).
 ***
 
 ## License
 
-See [Wiki/License](https://github.com/dyoung11/GWSC-Solver/wiki/License).
+See [Wiki/License](https://github.com/USEPA/GWSC-Solver/wiki/License).
 ***
