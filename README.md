@@ -17,6 +17,11 @@ See [Wiki/Home](https://github.com/USEPA/GWSC-Solver/wiki).
 ## Installation
 
 See [Wiki/Installation](https://github.com/USEPA/GWSC-Solver/wiki/Local-Installation-for-Programmers).
+
+Example script...
+* Convert Notebook to pdf
+* Run command from terminal `jupyter nbconvert --to pdf-rl steady_state_bredehoeft_solver.ipynb`
+
 ***
 
 ## Contributing
