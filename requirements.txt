@@ -1,0 +1,25 @@
+# Check Python versions = "version Python 3.9 (64-bit)."
+# This requirements document was generated in the following way:
+# 1. Create a new python virtual environment.
+# 2. Install packages in this environment from the previous requirements file in Github
+# 3. Delete the existing requirements file.
+# 4. Generate this requirements file.
+# This method ensures that all installed packages are in the requirements file, which
+# includes packages that are sub-requirements of other packages.
+
+#---------------------------------------------------------------------------------------#
+# All of these packages appear to be necessary for both Windows and Linux environments. #
+#---------------------------------------------------------------------------------------#
+
+ipykernel #>=5.5.0              # The IPython kernel for Jupyter.
+numpy #>=1.20.1                 # NumPy is the fundamental package for array computing with Python.
+scipy==1.2.1                    # SciPy: Scientific Library for Python
+nbconvert_reportlab #>=0.2      # An experimental tool to convert Jupyter notebooks to PDFs using Reportlab.
+reportlab #>=3.5.59             # The ReportLab Toolkit. An Open Source Python library for generating PDFs and graphics.
+tex #>=1.8                      # Convert LaTeX or TeX source to PDF or DVI, and escape strings for LaTeX.
+jupyter
+
+# Download https://miktex.org/download
+
+# NOTE: All version specifications, except for SciPy, to better support running in Python 3.6. 
+# Older version of Python is required to use SciPy 1.2.1, only version currently works with Transient solvers.
